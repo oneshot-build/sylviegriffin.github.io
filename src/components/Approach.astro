@@ -1,16 +1,20 @@
 ---
-const differentiators = [
+const services = [
   {
-    title: "Not therapy",
-    description: "I won't ask you to explore your childhood or sit with your feelings for an hour. This is practical, strategic coaching designed for how your mind works.",
+    title: "Life Coaching",
+    description: "One-on-one sessions to help you discover your unique purpose, overcome limiting beliefs, and create a life aligned with your authentic self. This is where transformation begins.",
   },
   {
-    title: "Not productivity coaching",
-    description: "I'm not here to help you squeeze more out of yourself. We're redesigning the system so it actually sustains you.",
+    title: "Yoga & Movement",
+    description: "Reconnect with your body and breath through personalized yoga practices. Learn to listen to the wisdom your body has been trying to share with you.",
   },
   {
-    title: "Not wellness fluff",
-    description: "No mantras. No vision boards. Evidence-based strategies from neuroscience, behavioral psychology, and leadership research.",
+    title: "Reiki Healing",
+    description: "Energy healing sessions to release blockages, restore balance, and support your spiritual journey. Experience the profound peace that comes from alignment.",
+  },
+  {
+    title: "Conscious Travel",
+    description: "Transformative travel experiences in Brazil that combine coaching, yoga, and cultural immersion. Step out of your routine and into possibility.",
   },
 ];
 ---
@@ -19,24 +23,24 @@ const differentiators = [
   <div class="container">
     <div class="approach-grid">
       <div class="approach-intro" data-reveal>
-        <span class="section-subtitle">The Approach</span>
+        <span class="section-subtitle">Services</span>
         <h2 class="section-title balance">
-          Recovery that respects your reality
+          A holistic approach to finding your purpose
         </h2>
         <p class="approach-lead">
-          You don't have time for solutions that require you to become a different person.
-          You need strategies that work within your actual life — the one with back-to-back
-          meetings, high-stakes decisions, and people depending on you.
+          True transformation happens when we address mind, body, and spirit together.
+          My services are designed to work in harmony, helping you discover who you're meant
+          to be and supporting you every step of the way.
         </p>
         <p class="approach-text">
-          My approach is built on a simple premise: <strong>burnout isn't a personal failing.
-          It's a systems problem.</strong> Together, we identify the patterns that are depleting
-          you and rebuild them — not by doing less, but by leading differently.
+          I believe <strong>everyone has a unique mission on earth, and when you find yours and
+          serve it, abundance flows naturally.</strong> My role is to help you reconnect with your
+          authentic self and give you the tools to live the fulfilling life you're meant to have.
         </p>
       </div>
 
       <div class="approach-differentiators">
-        {differentiators.map((item, index) => (
+        {services.map((item, index) => (
           <div
             class="differentiator-card"
             data-reveal

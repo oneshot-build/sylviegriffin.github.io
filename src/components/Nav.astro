@@ -6,17 +6,16 @@ interface Props {
 const { class: className } = Astro.props;
 
 const navItems = [
-  { label: 'Is This You?', href: '#symptoms' },
-  { label: 'Approach', href: '#approach' },
   { label: 'About', href: '#about' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'Services', href: '#approach' },
+  { label: 'The Journey', href: '#how-it-works' },
 ];
 ---
 
 <nav class:list={['nav', className]}>
   <div class="nav-inner container">
     <a href="/" class="logo">
-      <span class="logo-text">Restore</span>
+      <span class="logo-text">Sylvie Griffin</span>
     </a>
 
     <ul class="nav-links hide-mobile">
@@ -29,8 +28,8 @@ const navItems = [
       ))}
     </ul>
 
-    <a href="#book" class="nav-cta">
-      Book a call
+    <a href="https://wa.me/5521960118962?text=Hi%20Sylvie%2C%20I%27d%20like%20to%20book%20a%20coaching%20session" class="nav-cta" target="_blank" rel="noopener noreferrer">
+      Book a session
     </a>
 
     <button class="nav-toggle hide-desktop" aria-label="Toggle menu" aria-expanded="false">
@@ -51,8 +50,8 @@ const navItems = [
       </li>
     ))}
     <li>
-      <a href="#book" class="mobile-link mobile-cta">
-        Book a call
+      <a href="https://wa.me/5521960118962?text=Hi%20Sylvie%2C%20I%27d%20like%20to%20book%20a%20coaching%20session" class="mobile-link mobile-cta" target="_blank" rel="noopener noreferrer">
+        Book a session
       </a>
     </li>
   </ul>
