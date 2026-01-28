@@ -214,12 +214,12 @@ import { Quote } from 'lucide-react'
 
 const testimonials = [
   {
-    name: '김민수',
-    role: 'CEO',
-    company: '테크스타트업',
+    name: 'Maurice',
+    role: 'Life coach',
+    company: 'Germany',
     image: '/testimonials/person1.jpg',
     rating: 5,
-    content: '이 제품을 사용한 후 업무 효율이 3배 향상되었습니다. 정말 놀라운 변화였어요!',
+    content: 'Sylvie is fantastic at breaking down complexity into more manageable pieces and guiding the conversation across a red thread, without losing the point or the objective.',
   },
   {
     name: '이지은',
