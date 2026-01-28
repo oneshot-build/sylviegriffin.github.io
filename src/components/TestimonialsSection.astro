@@ -1,0 +1,75 @@
+---
+---
+
+<section id="testimonials" class="testimonials section container">
+  <div class="section-title">
+    <h2 class="title">What people say about working with Sylvie</h2>
+  </div>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        "Sylvie's coaching helped me unlock my potential and achieve goals I never thought possible. Her insights are truly transformative."
+      </p>
+      <p class="testimonial-author">— Alex P.</p>
+    </div>
+
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        "Working with Sylvie has been a game-changer for my career. Her strategic guidance and unwavering support made all the difference."
+      </p>
+      <p class="testimonial-author">— Brenda L.</p>
+    </div>
+
+    <div class="testimonial-card">
+      <p class="testimonial-text">
+        "I was at a crossroads, and Sylvie helped me find clarity and confidence. I'm so grateful for her wisdom and encouragement."
+      </p>
+      <p class="testimonial-author">— Carlos R.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+  }
+
+  .testimonial-card {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .testimonial-text {
+    font-size: var(--text-md);
+    line-height: var(--line-height-md);
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+    font-style: italic;
+  }
+
+  .testimonial-author {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: var(--text-secondary);
+    text-align: right;
+  }
+</style>
