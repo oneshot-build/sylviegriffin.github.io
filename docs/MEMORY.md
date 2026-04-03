@@ -2,6 +2,19 @@
 
 ## Recent Changes
 
+### Removed "The Journey" Section (April 3, 2026)
+- **Files Modified**: 
+  - `src/pages/index.astro:9,23` - Removed HowItWorks component import and usage
+  - `src/components/Nav.astro:12` - Removed "The Journey" navigation link from navItems array
+  - `src/components/Footer.astro:7` - Removed "The Journey" navigation link from navLinks array
+- **File Deleted**: 
+  - `src/components/HowItWorks.astro` - Completely removed the component file
+- **Section Removed**: 
+  - Complete "The Journey" section that displayed a 3-step process (Connect, Discover, Transform)
+  - Navigation links from both header navigation and footer navigation
+- **Implementation**: End-to-end removal complete - "The Journey" section and navigation no longer exist
+- **Verification**: Build process and dev server confirmed working correctly after removal
+
 ### Removed Corporate Events Service from Services Section (April 3, 2026)
 - **Files Modified**: 
   - `src/components/Approach.astro:15-18` - Removed "Corporate events and groups" service from services array
