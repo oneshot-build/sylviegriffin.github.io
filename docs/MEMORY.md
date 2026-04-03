@@ -2,6 +2,17 @@
 
 ## Recent Changes
 
+### Removed Corporate Events Service from Services Section (April 3, 2026)
+- **Files Modified**: 
+  - `src/components/Approach.astro:15-18` - Removed "Corporate events and groups" service from services array
+- **Service Removed**: 
+  - Title: "Corporate events and groups"
+  - Description: "Taylor made group coaching and yoga sessions"
+- **Remaining Services**: Life Coaching, Yoga & Movement, Conscious Travel
+- **Implementation**: End-to-end removal complete - corporate events service no longer appears in main Services section
+- **Note**: Corporate section (Corporate.astro) remains intact as separate component with its own dedicated services
+- **Verification**: Build process confirmed working correctly after removal
+
 ### Removed Corporate Services (April 3, 2026)
 - **Files Modified**: 
   - `src/components/Corporate.astro:2-7` - Removed two services from services array
@@ -69,7 +80,7 @@
 - **Integrations**: React components, Tailwind CSS
 - **Services**: Defined in `src/components/Approach.astro` as an array of service objects
 - **Main Page**: `src/pages/index.astro` orchestrates all components
-- **Current Services**: Life Coaching, Yoga & Movement, Conscious Travel, Corporate events and groups
+- **Current Services**: Life Coaching, Yoga & Movement, Conscious Travel
 - **Documentation**: Comprehensive project docs in `docs/PROJECT.md`
 
 ### Automated Verification Fixes (April 3, 2026 - Second Round)
