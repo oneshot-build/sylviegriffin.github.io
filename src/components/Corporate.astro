@@ -1,0 +1,134 @@
+---
+const services = [
+  "Workplace yoga sessions for stress reduction",
+  "Team coaching for improved communication", 
+  "Leadership development workshops",
+  "Wellbeing seminars for employee engagement",
+  "Corporate retreats and team-building events",
+  "Customized programs for larger groups"
+];
+---
+
+<section id="corporate" class="corporate-section">
+  <div class="container">
+    <div class="corporate-content" data-reveal>
+      <span class="section-subtitle">Corporate</span>
+      <h2 class="section-title">
+        Promoting wellbeing at the workplace: yoga and coaching for corporations, events and larger groups
+      </h2>
+      
+      <div class="corporate-description">
+        <p>
+          Transform your workplace culture with holistic wellbeing programs designed to reduce stress, enhance productivity, and foster genuine connection among team members. Drawing from my corporate banking background and expertise in yoga and coaching, I understand the unique challenges of high-pressure environments.
+        </p>
+        <p>
+          Whether you're looking to support employee mental health, improve team dynamics, or create a more mindful workplace culture, my corporate programs are tailored to meet your organization's specific needs and goals.
+        </p>
+      </div>
+
+      <ul class="services-list" data-reveal>
+        {services.map((service) => (
+          <li class="service-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.5 15.5L12 18L18 10" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            {service}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .corporate-section {
+    padding: var(--space-3xl) 0;
+    background: var(--bg-primary);
+  }
+
+  .corporate-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .section-subtitle {
+    display: block;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+    color: var(--accent);
+    margin-bottom: var(--space-sm);
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: var(--weight-normal);
+    color: var(--text-primary);
+    margin-bottom: var(--space-lg);
+    line-height: var(--leading-tight);
+  }
+
+  .corporate-description {
+    margin-bottom: var(--space-xl);
+    text-align: left;
+  }
+
+  .corporate-description p {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-md);
+  }
+
+  .corporate-description p:last-child {
+    margin-bottom: 0;
+  }
+
+  .services-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-sm);
+    margin-top: var(--space-lg);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--border);
+    text-align: left;
+  }
+
+  .service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    font-size: var(--text-sm);
+    color: var(--text-primary);
+    padding: var(--space-xs) 0;
+  }
+
+  .service-item svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: var(--text-2xl);
+    }
+    
+    .services-list {
+      grid-template-columns: 1fr;
+    }
+    
+    .corporate-content {
+      text-align: left;
+    }
+    
+    .section-subtitle,
+    .section-title {
+      text-align: left;
+    }
+  }
+</style>

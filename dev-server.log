@@ -25,3 +25,11 @@
 23:41:49 [watch] src/components/Footer.astro
 23:41:49 [200] / 40ms
 23:42:13 [200] / 6ms
+23:45:54 [watch] src/components/Nav.astro
+23:45:55 [200] / 24ms
+23:45:59 [watch] src/pages/index.astro
+23:45:59 [watch] src/pages/index.astro
+23:46:00 [200] / 35ms
+23:46:03 [watch] src/pages/index.astro
+23:46:03 [watch] src/pages/index.astro
+23:46:04 [200] / 19ms

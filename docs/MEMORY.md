@@ -2,6 +2,19 @@
 
 ## Recent Changes
 
+### Added Corporate Section (April 3, 2026)
+- **Files Created/Modified**: 
+  - **NEW**: `src/components/Corporate.astro` - Created dedicated Corporate section component
+  - `src/components/Nav.astro:8-13` - Added "Corporate" navigation link (href: #corporate)
+  - `src/pages/index.astro:7` - Imported Corporate component
+  - `src/pages/index.astro:19` - Added Corporate section to main page layout (positioned between Approach and HowItWorks sections)
+- **Content Added**: 
+  - **Section Title**: "Promoting wellbeing at the workplace: yoga and coaching for corporations, events and larger groups"
+  - **Services Listed**: Workplace yoga sessions, team coaching, leadership workshops, wellbeing seminars, corporate retreats, customized programs for larger groups
+  - **Description**: Professional wellbeing programs tailored for organizations, drawing from corporate banking background and expertise
+- **Implementation**: End-to-end implementation complete - Corporate section accessible via navigation and displays in website
+- **Verification**: Build process and development server confirmed working correctly after addition
+
 ### Reverted Services Title (April 3, 2026)
 - **Files Modified**: 
   - `src/components/Approach.astro:26` - Reverted section subtitle from "Services for individuals" back to "Services"
