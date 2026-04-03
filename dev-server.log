@@ -1,0 +1,16 @@
+
+> vibe-starter@0.0.1 dev
+> astro dev --port 4321 --host 0.0.0.0
+
+23:34:14 [types] Generated 0ms
+23:34:14 [content] Syncing content
+23:34:14 [content] Synced content
+
+ astro  v5.18.1 ready in 382 ms
+
+┃ Local    http://localhost:4321/
+┃ Network  http://169.254.0.21:4321/
+
+23:34:14 watching for file changes...
+23:34:24 [200] / 219ms
+23:35:02 [200] / 19ms
