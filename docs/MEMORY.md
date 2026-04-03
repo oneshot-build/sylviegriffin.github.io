@@ -16,6 +16,14 @@
   - ✅ Project documentation now comprehensive and accurate
   - ✅ Tailwind CSS configuration warnings resolved
 
+### Removed Reiki Healing Service (April 3, 2026)
+- **Files Modified**: 
+  - `src/components/Approach.astro:11-14` - Removed service definition from services array
+  - `docs/MEMORY.md:32` - Updated services list in documentation
+- **Change**: Completely removed "Reiki Healing" service from the services section
+- **Implementation**: End-to-end removal complete - service no longer appears in website
+- **Verification**: Dev server and build process confirmed working correctly after removal
+
 ### Updated Corporate Events Service
 - **File Modified**: `src/components/Approach.astro:20-21`
 - **Change**: Updated "Corporate events" service title and description
@@ -29,7 +37,7 @@
 - **Integrations**: React components, Tailwind CSS
 - **Services**: Defined in `src/components/Approach.astro` as an array of service objects
 - **Main Page**: `src/pages/index.astro` orchestrates all components
-- **Current Services**: Life Coaching, Yoga & Movement, Reiki Healing, Conscious Travel, Corporate events and groups
+- **Current Services**: Life Coaching, Yoga & Movement, Conscious Travel, Corporate events and groups
 - **Documentation**: Comprehensive project docs in `docs/PROJECT.md`
 
 ## Technical Notes
