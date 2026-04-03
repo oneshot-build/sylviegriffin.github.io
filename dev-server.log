@@ -1,16 +1,19 @@
 
 > vibe-starter@0.0.1 dev
-> astro dev --port 4321 --host 0.0.0.0
+> astro dev
 
-23:34:14 [types] Generated 0ms
-23:34:14 [content] Syncing content
-23:34:14 [content] Synced content
+23:39:33 [types] Generated 0ms
+23:39:33 [content] Syncing content
+23:39:33 [content] Synced content
+23:39:33 [vite] Re-optimizing dependencies because vite config has changed
 
- astro  v5.18.1 ready in 382 ms
+ astro  v5.18.1 ready in 420 ms
 
 ┃ Local    http://localhost:4321/
 ┃ Network  http://169.254.0.21:4321/
 
-23:34:14 watching for file changes...
-23:34:24 [200] / 219ms
-23:35:02 [200] / 19ms
+23:39:33 watching for file changes...
+23:39:37 [200] / 219ms
+23:39:41 [200] / 9ms
+23:39:56 [200] / 5ms
+23:40:26 [200] / 13ms
