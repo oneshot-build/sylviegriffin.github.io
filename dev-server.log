@@ -18,3 +18,9 @@
 23:39:56 [200] / 5ms
 23:40:26 [200] / 13ms
 23:40:46 [200] / 7ms
+23:41:36 [watch] src/components/Approach.astro
+23:41:37 [200] / 103ms
+23:41:43 [watch] src/components/Nav.astro
+23:41:43 [200] / 28ms
+23:41:49 [watch] src/components/Footer.astro
+23:41:49 [200] / 40ms

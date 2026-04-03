@@ -2,14 +2,14 @@
 
 ## Recent Changes
 
-### Updated Services Title (April 3, 2026)
+### Reverted Services Title (April 3, 2026)
 - **Files Modified**: 
-  - `src/components/Approach.astro:26` - Updated section subtitle
-  - `src/components/Nav.astro:10` - Updated navigation label
-  - `src/components/Footer.astro:6` - Updated footer navigation label
-- **Change**: Updated "Services" title to "Services for individuals" across all components
-- **Implementation**: End-to-end implementation complete - updated title now displays consistently across website navigation and services section
-- **Verification**: Build process confirmed working correctly after changes
+  - `src/components/Approach.astro:26` - Reverted section subtitle from "Services for individuals" back to "Services"
+  - `src/components/Nav.astro:10` - Reverted navigation label from "Services for individuals" back to "Services"
+  - `src/components/Footer.astro:6` - Reverted footer navigation label from "Services for individuals" back to "Services"
+- **Change**: Undid previous change - reverted "Services for individuals" back to "Services" across all components
+- **Implementation**: End-to-end reversion complete - title now displays as "Services" consistently across website navigation and services section
+- **Verification**: Build process confirmed working correctly after reversion
 
 ### Automated Verification Fixes (March 25, 2026)
 - **Issues Resolved**: Fixed automated verification problems detected in build/deployment process
