@@ -34,3 +34,5 @@
 23:46:03 [watch] src/pages/index.astro
 23:46:04 [200] / 19ms
 23:46:44 [200] / 6ms
+23:49:02 [watch] src/components/Corporate.astro
+23:49:03 [200] / 49ms

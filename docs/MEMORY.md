@@ -2,6 +2,16 @@
 
 ## Recent Changes
 
+### Removed Corporate Services (April 3, 2026)
+- **Files Modified**: 
+  - `src/components/Corporate.astro:2-7` - Removed two services from services array
+- **Services Removed**: 
+  - "Team coaching for improved communication"
+  - "Leadership development workshops"
+- **Remaining Services**: Workplace yoga sessions, wellbeing seminars, corporate retreats, customized programs for larger groups
+- **Implementation**: End-to-end removal complete - services no longer appear in Corporate section
+- **Verification**: Build process confirmed working correctly after removal
+
 ### Added Corporate Section (April 3, 2026)
 - **Files Created/Modified**: 
   - **NEW**: `src/components/Corporate.astro` - Created dedicated Corporate section component
