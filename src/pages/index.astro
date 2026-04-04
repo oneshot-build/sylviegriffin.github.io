@@ -6,13 +6,34 @@ import Symptoms from '../components/Symptoms.astro';
 import About from '../components/About.astro';
 import Approach from '../components/Approach.astro';
 import Corporate from '../components/Corporate.astro';
+import Contact from '../components/Contact.astro';
 
 import CTA from '../components/CTA.astro';
 import Footer from '../components/Footer.astro';
+
+// Check for success/error messages from contact form
+const urlParams = new URL(Astro.url).searchParams;
+const success = urlParams.get('success');
+const error = urlParams.get('error');
 ---
 
 <Layout title="Sylvie — Life Coach, Yoga Teacher & Purpose Guide">
   <Nav />
+
+  <!-- Success/Error Messages -->
+  {success && (
+    <div class="message-banner success">
+      <p>✅ Thank you! Your message has been sent successfully. I'll get back to you within 24 hours.</p>
+      <button class="close-banner" onclick="this.parentElement.style.display='none'">×</button>
+    </div>
+  )}
+  
+  {error && (
+    <div class="message-banner error">
+      <p>❌ Sorry, there was an error sending your message. Please try again or contact me directly.</p>
+      <button class="close-banner" onclick="this.parentElement.style.display='none'">×</button>
+    </div>
+  )}
 
   <main>
     <Hero />
@@ -20,9 +41,77 @@ import Footer from '../components/Footer.astro';
     <About />
     <Approach />
     <Corporate />
+    <Contact />
 
     <CTA />
   </main>
 
   <Footer />
 </Layout>
+
+<style>
+  .message-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-toast);
+    padding: var(--space-sm) var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    font-weight: var(--weight-medium);
+    animation: slideDown 0.3s var(--ease-out-expo);
+  }
+
+  .message-banner.success {
+    background: var(--success);
+    color: white;
+  }
+
+  .message-banner.error {
+    background: var(--error);
+    color: white;
+  }
+
+  .message-banner p {
+    margin: 0;
+    text-align: center;
+    font-size: var(--text-sm);
+  }
+
+  .close-banner {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    transition: background-color var(--duration-fast) var(--ease-calm);
+  }
+
+  .close-banner:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  /* Add top margin to body when banner is present */
+  .message-banner ~ * {
+    margin-top: 4rem;
+  }
+</style>
