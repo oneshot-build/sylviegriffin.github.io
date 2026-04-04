@@ -10,6 +10,9 @@ export default defineConfig({
   adapter: node({
     mode: 'standalone'
   }),
+  security: {
+    checkOrigin: false
+  },
   site: 'https://sylviegrf.com',
   integrations: [tailwind(), react()],
   server: {

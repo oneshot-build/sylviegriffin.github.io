@@ -1,0 +1,53 @@
+24:06:36 [@astrojs/node] Server listening on 
+  local: http://localhost:4321 	
+  network: http://169.254.0.21:4321
+
+Contact form submission: {
+  contentType: 'application/x-www-form-urlencoded',
+  origin: 'http://localhost:4321',
+  referer: 'http://localhost:4321/'
+}
+=== CONTACT FORM SUBMISSION ===
+To: sylviegriffin@gmail.com
+Subject: New Contact Form Submission - general-inquiry
+Body: You have received a new contact form submission from your website:
+
+<strong>Name:</strong> Test User
+<strong>Email:</strong> test@example.com
+<strong>Phone:</strong> Not provided
+<strong>Subject:</strong> general-inquiry
+
+<strong>Message:</strong>
+This is a test message to verify the contact form works correctly.
+
+---
+<small>This message was sent from your website contact form at 4/4/2026, 12:06:43 AM.</small>
+============================
+
+📧 Contact Form Email Notification
+════════════════════════════════════════════════════════════
+To: sylviegriffin@gmail.com
+Reply-To: test@example.com
+Subject: New Contact Form Submission - general-inquiry
+════════════════════════════════════════════════════════════
+You have received a new contact form submission from your website:
+
+<strong>Name:</strong> Test User
+<strong>Email:</strong> test@example.com
+<strong>Phone:</strong> Not provided
+<strong>Subject:</strong> general-inquiry
+
+<strong>Message:</strong>
+This is a test message to verify the contact form works correctly.
+
+---
+<small>This message was sent from your website contact form at 4/4/2026, 12:06:43 AM.</small>
+════════════════════════════════════════════════════════════
+💡 To send real emails, configure RESEND_API_KEY environment variable
+   Visit https://resend.com to get your API key
+
+Contact form submission: {
+  contentType: 'application/x-www-form-urlencoded',
+  origin: 'http://localhost:4321',
+  referer: 'http://localhost:4321/'
+}

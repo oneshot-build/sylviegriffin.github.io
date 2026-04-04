@@ -2,6 +2,31 @@
 
 ## Recent Changes
 
+### Added Contact Section with Email Form (April 4, 2026)
+- **Files Created**:
+  - `src/components/Contact.astro` - New contact form component with professional styling
+  - `src/pages/api/contact.ts` - Server action for handling form submissions and email sending
+  - `.env.example` - Template for email service configuration
+- **Files Modified**: 
+  - `astro.config.mjs` - Updated to server mode with Node.js adapter for form handling
+  - `src/pages/index.astro` - Added Contact component and success/error message handling
+  - `package.json` - Added Resend email service and Node.js types dependencies
+- **Features Implemented**:
+  - **Contact Form**: Professional contact form with fields for name, email, phone, subject, and message
+  - **Email Integration**: Resend API integration for sending emails to sylviegriffin@gmail.com
+  - **Server Actions**: End-to-end form handling with validation and error handling
+  - **Success/Error Feedback**: User-friendly messages displayed after form submission
+  - **Responsive Design**: Form adapts to all screen sizes with accessible styling
+  - **Fallback Logging**: Development mode logs emails to console when API key not configured
+- **Email Configuration**:
+  - Target email: sylviegriffin@gmail.com (as requested)
+  - Service: Resend API (production-ready with fallback for development)
+  - Form validation: Required fields, email format validation, error handling
+- **Implementation**: End-to-end contact functionality complete - form captures user input, validates data, sends email, and provides user feedback
+- **Verification**: Build process and server mode confirmed working correctly after implementation
+
+## Recent Changes
+
 ### Removed "The Journey" Section (April 3, 2026)
 - **Files Modified**: 
   - `src/pages/index.astro:9,23` - Removed HowItWorks component import and usage

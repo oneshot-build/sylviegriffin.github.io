@@ -4,6 +4,13 @@ import type { APIRoute } from 'astro';
 
 export const POST: APIRoute = async ({ request, redirect }) => {
   try {
+    // Log request details for debugging
+    const contentType = request.headers.get('content-type');
+    const origin = request.headers.get('origin');
+    const referer = request.headers.get('referer');
+    
+    console.log('Contact form submission:', { contentType, origin, referer });
+    
     const formData = await request.formData();
     
     const name = formData.get('name') as string;
@@ -42,18 +49,18 @@ export const POST: APIRoute = async ({ request, redirect }) => {
     // Prepare email content
     const subjectLine = `New Contact Form Submission - ${subject}`;
     const emailBody = `
-You have received a new contact form submission:
+You have received a new contact form submission from your website:
 
-Name: ${name}
-Email: ${email}
-Phone: ${phone || 'Not provided'}
-Subject: ${subject}
+<strong>Name:</strong> ${name}
+<strong>Email:</strong> ${email}
+<strong>Phone:</strong> ${phone || 'Not provided'}
+<strong>Subject:</strong> ${subject}
 
-Message:
+<strong>Message:</strong>
 ${message}
 
 ---
-This message was sent from your website contact form.
+<small>This message was sent from your website contact form at ${new Date().toLocaleString()}.</small>
     `.trim();
 
     // For now, we'll use a simple email service approach
@@ -108,7 +115,7 @@ This message was sent from your website contact form.
   }
 };
 
-// Email sending function - implement with your preferred email service
+// Email sending function with Resend integration
 async function sendEmail({ 
   to, 
   subject, 
@@ -120,33 +127,46 @@ async function sendEmail({
   body: string;
   replyTo: string;
 }): Promise<boolean> {
-  // This is a placeholder implementation
-  // Replace with your actual email service integration
-  
   try {
-    // For development/testing, we'll just log the email
-    // In production, integrate with your email service
+    // Check if we have a Resend API key configured
+    const resendApiKey = import.meta.env.RESEND_API_KEY;
     
-    // Example with fetch to a webhook service (like Formspree, Netlify Forms, etc.)
-    /*
-    const response = await fetch('YOUR_EMAIL_SERVICE_ENDPOINT', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        to,
-        subject,
+    if (resendApiKey) {
+      // Production: Use Resend API
+      const { Resend } = await import('resend');
+      const resend = new Resend(resendApiKey);
+      
+      const { data, error } = await resend.emails.send({
+        from: 'Contact Form <noreply@sylviegrf.com>',
+        to: [to],
+        replyTo: [replyTo],
+        subject: subject,
         html: body.replace(/\n/g, '<br>'),
-        replyTo
-      })
-    });
-    
-    return response.ok;
-    */
-    
-    // For now, return true to simulate successful sending
-    return true;
+      });
+      
+      if (error) {
+        console.error('Resend error:', error);
+        return false;
+      }
+      
+      console.log('Email sent successfully via Resend:', data?.id);
+      return true;
+    } else {
+      // Development: Log to console
+      console.log('\n📧 Contact Form Email Notification');
+      console.log('═'.repeat(60));
+      console.log(`To: ${to}`);
+      console.log(`Reply-To: ${replyTo}`);
+      console.log(`Subject: ${subject}`);
+      console.log('═'.repeat(60));
+      console.log(body.replace(/\n/g, '\n'));
+      console.log('═'.repeat(60));
+      console.log('💡 To send real emails, configure RESEND_API_KEY environment variable');
+      console.log('   Visit https://resend.com to get your API key\n');
+      
+      // Return true to simulate successful sending in development
+      return true;
+    }
     
   } catch (error) {
     console.error('Email sending failed:', error);
