@@ -2,6 +2,19 @@
 
 ## Recent Changes
 
+### Updated About Section Credentials (April 4, 2026)
+- **Files Modified**:
+  - `src/components/About.astro:2-9` - Updated credentials array with 6 new bullet points
+- **Change**: Updated the 4 bullet points in the About section to 6 new bullet points:
+  - "Trained Life Coach"
+  - "Certified Yoga Teacher" 
+  - "Master's degree in Economics"
+  - "Former Banking Executive"
+  - "Fluent in English, French and Portuguese"
+  - "Based in Brazil, serving clients worldwide"
+- **Implementation**: End-to-end change complete - credentials array updated, build verified successful
+- **Verification**: Build process completes successfully with no errors
+
 ### Added Contact Section with Email Form (April 4, 2026)
 - **Files Created**:
   - `src/components/Contact.astro` - New contact form component with professional styling
